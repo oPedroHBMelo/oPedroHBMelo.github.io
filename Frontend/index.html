@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Hits - Plataforma de Entretenimento</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Central Hits</div>
+            <button class="hamburger-btn" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#shop">Loja</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <!-- Animated Background -->
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="stars"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">🎵 Bem-vindo à revolução do entretenimento</div>
+            <h1 class="hero-title">Central Hits</h1>
+            <p class="hero-subtitle">A plataforma definitiva para descobrir conteúdo excepcional</p>
+            
+            <button class="cta-button" onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})">
+                <span class="button-text">Explorar Catálogo</span>
+                <span class="button-icon">→</span>
+            </button>
+            
+            <p class="hero-footnote">Acesso exclusivo a conteúdo premium</p>
+        </div>
+        
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M12 5v14M5 12l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Sobre Central Hits</h2>
+            <p>
+                Central Hits é a principal plataforma de entretenimento para músicas, imagens e conteúdo multimídia de alta qualidade.
+                Oferecemos uma experiência única com acesso a conteúdo exclusivo e atualizado constantemente.
+            </p>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>🎵 Música</h3>
+                    <p>Acesso a milhares de faixas em alta qualidade</p>
+                </div>
+                <div class="service-card">
+                    <h3>🖼️ Imagens</h3>
+                    <p>Galeria exclusiva de imagens artísticas</p>
+                </div>
+                <div class="service-card">
+                    <h3>📱 Multiplataforma</h3>
+                    <p>Acesso em qualquer dispositivo, a qualquer hora</p>
+                </div>
+                <div class="service-card">
+                    <h3>🎁 Exclusivos</h3>
+                    <p>Conteúdo exclusivo para membros</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loja -->
+    <section id="shop" class="shop">
+        <div class="container">
+            <h2>Catálogo de Produtos</h2>
+            <div id="shopContainer" class="products-grid">
+                <p class="loading">Carregando produtos...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form id="contactForm" class="contact-form">
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu email" required>
+                <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                <button type="submit" class="btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Central Hits. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Verificar se é administrador autenticado
+        // Se não estiver autenticado, será redirecionado para login
+        // (comentado para permitir acesso público também)
+        // const token = localStorage.getItem('authToken');
+        // if (!token) {
+        //     window.location.href = 'admin-login.html';
+        // }
+    </script>
+</body>
+</html>
